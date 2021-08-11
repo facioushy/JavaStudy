@@ -7,6 +7,7 @@
     * [基础篇](java-mian-shi-ti/java/ji-chu-pian.md)
     * [并发篇](java-mian-shi-ti/java/bing-fa-pian.md)
     * [JVM篇](java-mian-shi-ti/java/jvm-pian.md)
+    * [简简简](java-mian-shi-ti/java/简简简.md)
   * [计算机基础](java-mian-shi-ti/ji-suan-ji-ji-chu/README.md)
     * [操作系统篇](java-mian-shi-ti/ji-suan-ji-ji-chu/cao-zuo-xi-tong-pian.md)
     * [计网篇](java-mian-shi-ti/ji-suan-ji-ji-chu/ji-wang-pian.md)
@@ -19,4 +20,4 @@
     * [Spring篇](java-mian-shi-ti/kuang-jia/spring-pian.md)
   * [其他](java-mian-shi-ti/qi-ta/README.md)
     * [设计模式篇](java-mian-shi-ti/qi-ta/she-ji-mo-shi-pian.md)
-
+  * [简](java-mian-shi-ti/简.md)
