@@ -47,7 +47,7 @@ String 类型和 StringBuffer、 StringBuild类型的主要性能区别其实在
 
 StringBuffer和StringBuilder可以算是双胞胎了，这两者的方法没有很大区别。但在线程安全性方面，StringBuffer允许多线程进行字符操作。这是因为在源代码中StringBuffer的很多方法都被关键字synchronized 修饰了，而StringBuilder没有。
 
-## Error和Exception区别
+## 2. Error和Exception区别
 
 Error 和 Exception 都是 Throwable 的子类，在Java中只有Throwable类型的实例才可以被抛出或者捕获，它是异常处理机制的基本类型。
 
@@ -55,7 +55,7 @@ Error 和 Exception 都是 Throwable 的子类，在Java中只有Throwable类型
 2. Error是指正常情况下，不大可能出现的情况，绝大部分的Error都会导致程序处于非正常的、不可恢复的状态。既然是非正常情况，不便于也不需要捕获。常见的比如OutOfMemoryError之类都是Error的子类。
 3. Exception又分为可检查\(checked\)异常和不可检查\(unchecked\)异常。可检查异常在源代码里必须显式的进行捕获处理，这是编译期检查的一部分。不可检查时异常是指运行时异常，像NullPointerException、ArrayIndexOutOfBoundsException之类，通常是可以编码避免的逻辑错误，具体根据需要来判断是否需要捕获，并不会在编译期强制要求。
 
-## ==和equals区别
+## 3. ==和equals区别
 
 ==：判断地址是否相同，基本数据类型比较的是值，引用数据类型比较地址
 
@@ -138,4 +138,8 @@ public static void main(String[] args) {
 ### 重写equals时，为什么要重写hashcode方法
 
 在重写equals\(\)方法时，也有必要对hashCode\(\)方法进行重写，尤其是当我们自定义一个类，想把该类的实例存储在集合中时。 hashCode方法的常规约定为：值相同的对象必须有相同的hashCode，也就是equals\(\)结果为相同，那么hashcode也要相同，equals\(\)结果为不相同，那么hashcode也不相同； 当我们使用equals方法比较说明对象相同，但hashCode不同时，就会出现两个hashcode值，比如在HashMap中，就会认为这是两个对象，因此会出现矛盾，说明equals方法和hashCode方法应该成对出现，当我们对equals方法进行重写时，也要对hashCode方法进行重写。
+
+## 为什么重写equals必须重写hashcode
+
+如果只重写equals方法，但不重写hashcode，两个仅内存地址不同但变量完全相同的对象会分别存入不同的桶。
 
